@@ -96,16 +96,36 @@ S计入换行符
 '''
     把函数作为参数传递
 '''
-a = 'A83C3721D86'
+# a = 'A83C3721D86'
+#
+#
+# def convert(value):
+#     matched = int(value.group())
+#     if matched >= 6:
+#         return '9'
+#     else:
+#         return '0'
+#
+#
+# r = re.sub('\d', convert, a)
+# print(r)
 
+'''
+    match与search函数
+    match从开始的地方匹配（如果开头不符合规则就不继续）
+    search搜索所有字符串，一旦搜到结果立马返回
+    两种都是只要搜到结果就立马结束
+'''
+# s = '83C72D1D8E67'
+# r = re.match('\d', s)
+# print(r)
+# r1 = re.search('\d', s)
+# print(r1)
 
-def convert(value):
-    matched = int(value.group())
-    if matched >= 6:
-        return '9'
-    else:
-        return '0'
-
-
-r = re.sub('\d', convert, a)
-print(r)
+'''
+    group分组
+'''
+s = 'life is short, i use python, i love python'
+r = re.search('life(.*)python(.*)python', s)
+print(r.group(0, 1, 2))
+print(r.groups())
