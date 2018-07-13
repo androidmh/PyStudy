@@ -5,9 +5,12 @@
 # @File : c1.py
 # @Software: PyCharm
 from enum import Enum
+from enum import IntEnum
+
 '''
     枚举类
     优势:不可变，去重复标签
+    IntEnum枚举的值只能是整型
 '''
 
 
@@ -16,3 +19,7 @@ class VIP(Enum):
     GREEN = 2
     BLACK = 3
     RED = 4
+
+
+print(VIP.YELLOW.name)
+print(VIP(1))
