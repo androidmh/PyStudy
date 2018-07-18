@@ -49,7 +49,7 @@ class Spider:
     # 排序种子(排序时传入的计算函数)
     @staticmethod
     def __sort_seed(anchor):
-        r = re.findall('\d.*\d', anchor['number'])
+        r = re.findall('\d*', anchor['number'])
         number = float(r[0])
         if '万' in anchor['number']:
             number *= 10000
